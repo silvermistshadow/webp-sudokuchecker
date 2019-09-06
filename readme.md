@@ -8,6 +8,18 @@
 
 _{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
 
+specs:
+  0. checks for 9 digits vertically
+  1. checks for 9 digits horizontally
+  2. checks for 9 digits in grid
+  3. checks for 81 total digits
+  4. checks for duplicates in that order
+
+make 2 dimensional array
+horizontal line
+vertical line
+grid
+
 ## Setup/Installation Requirements
 
 * _This is a great place_
