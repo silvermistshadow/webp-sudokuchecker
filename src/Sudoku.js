@@ -15,20 +15,21 @@ export class Sudoku {
   }
   checkColumns() {
     let check = true;
-    let mainArray = [];
-    this.grid.forEach(function(column) {
-      for(let x=0; x<9; x++){
-        let tempArray = [];
-        for(let y=0; y<9; y++){
-          tempArray.push(grid[x][y])
+    var newGrid = [];
+    for (var x = 0; x<9;x++){
+        var column = [];
+        for (var y = 0; y<9; y++)
+        {
+            column.push(this.grid[y][x])
         }
-        mainArray.push(tempArray)
-        let tempSudoku = new Sudoku(mainArray);
-        check = tempSudoku.checkRows();
-      }
+        newGrid.push(column);
+    }
+    var newSudoku = new Sudoku(newGrid)
+    return newSudoku.checkRows();
+  }
 
-    })
-    return check;
+  checkGrid() {
+    
   }
 
 }

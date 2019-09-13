@@ -12,15 +12,16 @@ describe('Sudoku', function() {
     [8,5,9,7,6,1,4,2,3],[4,2,6,8,5,3,7,9,1],[7,1,3,9,2,4,8,5,6],
     [9,6,1,5,3,7,2,8,4],[2,8,7,4,1,1,6,3,5],[3,4,5,2,8,6,1,7,9]
   ];
+  let goodSudoku = new Sudoku(grid);
+  let badSudoku = new Sudoku(failGrid);
   it('should test if all entries have valid rows', function() {
-    let goodSudoku = new Sudoku(grid);
-    let badSudoku = new Sudoku(failGrid);
     expect(goodSudoku.checkRows()).toEqual(true);
     expect(badSudoku.checkRows()).toEqual(false);
   })
 
   it('should check if all entries have valid columns', function() {
-    
+    expect(goodSudoku.checkColumns()).toEqual(true);
+    expect(badSudoku.checkColumns()).toEqual(false);
   })
 
 })
