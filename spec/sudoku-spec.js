@@ -19,4 +19,8 @@ describe('Sudoku', function() {
     expect(badSudoku.checkRows()).toEqual(false);
   })
 
+  it('should check if all entries have valid columns', function() {
+    
+  })
+
 })
