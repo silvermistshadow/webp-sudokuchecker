@@ -23,5 +23,9 @@ describe('Sudoku', function() {
     expect(goodSudoku.checkColumns()).toEqual(true);
     expect(badSudoku.checkColumns()).toEqual(false);
   })
+  it('should test if each 3x3 grid is valid', function() {
+    expect(goodSudoku.checkGrid()).toEqual(true);
+    expect(badSudoku.checkGrid()).toEqual(false);
+  })
 
 })
