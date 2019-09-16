@@ -14,6 +14,10 @@ describe('Sudoku', function() {
   ];
   let goodSudoku = new Sudoku(grid);
   let badSudoku = new Sudoku(failGrid);
+  it('should create a Sudoku object', function() {
+    expect(goodSudoku.grid).toEqual(grid);
+  })
+  
   it('should test if all entries have valid rows', function() {
     expect(goodSudoku.checkRows()).toEqual(true);
     expect(badSudoku.checkRows()).toEqual(false);
